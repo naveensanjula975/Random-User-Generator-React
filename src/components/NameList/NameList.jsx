@@ -14,19 +14,11 @@ function NameList() {
     },
     {
       "id": 2,
-      "name": { "title": "mr", "first": "brad", "last": "gibson" },
-      "location": { "city": "kilcoole", },
-      "email": "brad.gibson@example.com",
+      "name": { "title": "mr", "first": "Samuel", "last": "Martin" },
+      "location": { "city": "Whangarei", },
+      "email": "samuel.martin@example.com",
       "dob": { "date": "1993-07-20T09:44:18.674Z", "age": 26 },
-      "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
-    },
-    {
-      "id": 3,
-      "name": { "title": "mr", "first": "brad", "last": "gibson" },
-      "location": { "city": "kilcoole", },
-      "email": "brad.gibson@example.com",
-      "dob": { "date": "1993-07-20T09:44:18.674Z", "age": 26 },
-      "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
+      "picture": { "medium": "https://randomuser.me/api/portraits/med/men/70.jpg", },
     },
   ]);
 
