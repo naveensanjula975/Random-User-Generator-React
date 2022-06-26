@@ -5,6 +5,7 @@ function NameList() {
 
   const nameList = [
     {
+      id: 1,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole" },
       "email": "brad.gibson@example.com",
@@ -12,6 +13,7 @@ function NameList() {
       "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
     },
     {
+      id: 2,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole", },
       "email": "brad.gibson@example.com",
@@ -19,6 +21,7 @@ function NameList() {
       "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
     },
     {
+      id: 3,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole", },
       "email": "brad.gibson@example.com",
@@ -31,6 +34,7 @@ function NameList() {
     return nameList.map((aName) => {
       return (
         <NameListItem
+          key={aName.id}
           name={`${aName.name.first} ${aName.name.last}`}
           city={aName.location.city}
           email={aName.email}
