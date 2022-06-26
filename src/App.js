@@ -1,5 +1,6 @@
-import NameList from "./components/NameList/NameList";
+import NameList from "./components/pages/NameList/NameList";
 import HeaderBar from "./components/HeaderBar/HeaderBar";
+import Home form './components/pages/'
 
 function App() {
   return (
