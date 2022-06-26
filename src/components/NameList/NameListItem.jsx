@@ -2,9 +2,15 @@ import React from "react";
 
 function NameListItem(props) {
     return (
-        <li>{props.name} - {props.course} - {props.email}</li>
-
-    ); 
+        <li>
+            <p>
+                <img src={props.avatar} /> {props.name}
+            </p >
+            <p>City: {props.city}</p>
+            <p>Email: {props.email}</p>
+            <p>Birthday: {new Intl.DateTimeFormat('en-GB').format(new Date(props.birthday))}</p>
+        </li>
+    );
 }
 
 export default NameListItem;
