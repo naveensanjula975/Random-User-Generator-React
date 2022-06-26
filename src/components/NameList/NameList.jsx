@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import NameListItem from "./NameListItem";
 
 function NameList() {
-  const [loadData, setLoadData] = useState(false);
+  const [loadData, setLoadData] = useState(new Date());
   const [nameList, setNameList] = useState([
     {
       "id": 1,
@@ -56,20 +56,7 @@ function NameList() {
   };
 
   const addUserHandler = () => {
-    const newUser = {
-      "id": new Date(),
-      "name": { "title": "mrs", "first": "Deniz", "last": "gibson" },
-      "location": { "city": "kilcoole", },
-      "email": "brad.gibson@example.com",
-      "dob": { "date": "1993-07-20T09:44:18.674Z", "age": 26 },
-      "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
-    };
-
-    // setNameList((nameList) => nameList.concat(newUser));
-
-    // Spread Operator
-    setNameList((nameList) => [...nameList, newUser]);
-
+    setLoadData(new Date());
   };
 
   return (
