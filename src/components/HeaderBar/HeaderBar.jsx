@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function HeaderBar() {
     return (
@@ -6,13 +7,13 @@ function HeaderBar() {
             <span className="navbar-brand mb-0 h1">Name List</span>
             <ul className="navbar-nav">
                 <li className="navbar-item">
-                    <a className="nav-link" href="#">Home</a>
+                    <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="navbar-item">
-                    <a className="nav-link" href="#">About</a>
+                    <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="navbar-item">
-                    <a className="nav-link" href="#">Show Name List</a>
+                    <Link className="nav-link" to="/namelist">Show Name List</Link>
                 </li>
             </ul>
         </nav>
