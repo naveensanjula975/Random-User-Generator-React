@@ -7,9 +7,19 @@ function NameList() {
             <h1>Name List</h1>
             <hr />
             <ul>
-                <NameListItem name="Naveen" course="Python" />
-                <NameListItem name="Sanjula" course="C#" />
-                <NameListItem name="asd" course="Azure" />
+                <NameListItem 
+                    name="Naveen" 
+                    course="Python" 
+                    email="naveen@email.com" 
+                />
+                <NameListItem 
+                    name="Sanjula" 
+                    course="C#"
+                />
+                <NameListItem 
+                    name="asd" 
+                    course="Azure" 
+                />
             </ul>
         </div>
     );
