@@ -5,7 +5,7 @@ function NameList() {
 
   const nameList = [
     {
-      id: 1,
+      "id": 1,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole" },
       "email": "brad.gibson@example.com",
@@ -13,7 +13,7 @@ function NameList() {
       "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
     },
     {
-      id: 2,
+      "id": 2,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole", },
       "email": "brad.gibson@example.com",
@@ -21,7 +21,7 @@ function NameList() {
       "picture": { "medium": "https://randomuser.me/api/portraits/med/men/75.jpg", },
     },
     {
-      id: 3,
+      "id": 3,
       "name": { "title": "mr", "first": "brad", "last": "gibson" },
       "location": { "city": "kilcoole", },
       "email": "brad.gibson@example.com",
@@ -46,10 +46,8 @@ function NameList() {
   };
 
   return (
-    <div>
-      <h1>Name List</h1>
-      <hr />
-      <ul>{nameListComponent()}</ul>
+    <div className="container mt-4">
+      <ul className="list-group">{nameListComponent()}</ul>
     </div>
   );
 }
