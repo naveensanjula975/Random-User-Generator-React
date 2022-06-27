@@ -5,6 +5,7 @@ class NameListC extends Component {
     super(props);
     console.log("Constructor Called");
     this.state = {
+      getAName: false,
       nameList: [
         {
           id: 1,
@@ -31,17 +32,34 @@ class NameListC extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount Method Called");
+    fetch("https://randomuser.me/api")
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseData) => {
+        this.setState({
+          nameList: [...this.state.nameList, responseData.results[0]],
+        });
+      });
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate Method Called");
-    console.log(this.state.message);
+    if (this.state.getAName) {
+      fetch("https://randomuser.me/api")
+        .then((response) => {
+          return response.json();
+        })
+        .then((responseData) => {
+          this.setState({
+            getAName: false,
+            nameList: [...this.state.nameList, responseData.results[0]],
+          });
+        });
+    }
   }
 
   addNameHandler = () => {
-    console.log("Add name button clicked");
-    console.log(this.state.message);
+    this.setState({ getAName: true });
   };
 
   nameListComponent = () => {
