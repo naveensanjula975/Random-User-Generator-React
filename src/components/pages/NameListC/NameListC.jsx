@@ -13,12 +13,14 @@ class NameListC extends Component {
 
     componentDidUpdate() {
         console.log('componentDidUpdate Method Called');
+        console.log(this.state.message);
     }
 
     addNameHandler = () => {
         console.log('Add name button clicked');
         console.log(this.state.message);
-    }
+        this.setState({ message: 'Hellow State Changed' });
+    };
 
     render() {
         return (
