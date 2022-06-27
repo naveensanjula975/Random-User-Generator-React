@@ -5,7 +5,8 @@ class NameListC extends Component {
     render() {
         return (
             <div className="container mt-4">
-                <h3>{this.props.message}</h3>
+                <button className="btn btn-primary mb-2">Add Name</button>
+                <ul className="list-group"></ul>
             </div>
         );
     }
