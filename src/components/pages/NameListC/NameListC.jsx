@@ -3,7 +3,11 @@ import React, { Component } from "react";
 class NameListC extends Component {
 
     render() {
-        return <h1>Class Component</h1>;
+        return (
+            <div className="container mt-4">
+                <h3>{this.props.message}</h3>
+            </div>
+        );
     }
 
 }

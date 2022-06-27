@@ -20,7 +20,7 @@ function App() {
             <NameList />
           </Route>
           <Route path="/namelistc">
-            <NameListC />
+            <NameListC message="Hello from app.js" />
           </Route>
           <Route path="/">
             <Home />
