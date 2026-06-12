@@ -1,3 +1,131 @@
-.redText {
-    color: red;
+/* ============================================================
+   NameListItem — Modern glassmorphism user card
+   ============================================================ */
+
+.user-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  transition: all var(--transition-normal);
+  animation: fadeInUp 0.4s ease both;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-accent-from), var(--color-accent-to));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.user-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.user-card:hover::before {
+  opacity: 1;
+}
+
+/* Avatar */
+.user-card__avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.user-card__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--color-border);
+  transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.user-card:hover .user-card__avatar {
+  border-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+.user-card__avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent-from), var(--color-accent-to));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-normal);
+}
+
+.user-card:hover .user-card__avatar-ring {
+  opacity: 0.4;
+}
+
+/* Content */
+.user-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-card__name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.user-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.user-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-card__meta-icon {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .user-card {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .user-card__avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .user-card__name {
+    font-size: var(--text-base);
+  }
 }

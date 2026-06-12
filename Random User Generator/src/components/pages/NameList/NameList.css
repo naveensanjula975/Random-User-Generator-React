@@ -1,0 +1,173 @@
+/* ============================================================
+   NameList Page — Users Directory
+   ============================================================ */
+
+.namelist-page {
+  padding: var(--space-12) 0 var(--space-24);
+}
+
+/* Page Header */
+.namelist-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.namelist-header__left {}
+
+.namelist-header__eyebrow {
+  margin-bottom: var(--space-3);
+}
+
+.namelist-header__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.namelist-header__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.namelist-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* Toolbar */
+.namelist-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 0.5s 0.1s ease both;
+}
+
+.namelist-toolbar__search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.namelist-toolbar__search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.namelist-toolbar__input {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.namelist-toolbar__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.namelist-toolbar__input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.namelist-toolbar__count {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* User List */
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Skeleton grid */
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Error Banner */
+.namelist-error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+  animation: scaleIn var(--transition-normal);
+  flex-wrap: wrap;
+}
+
+.namelist-error__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.namelist-error__content {
+  flex: 1;
+}
+
+.namelist-error__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: #fca5a5;
+  margin-bottom: var(--space-1);
+}
+
+.namelist-error__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .namelist-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .namelist-header__actions {
+    width: 100%;
+  }
+
+  .namelist-header__actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .namelist-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .namelist-toolbar__search {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,188 @@
+/* ============================================================
+   About Page
+   ============================================================ */
+
+.about-page {
+  padding: var(--space-16) 0 var(--space-24);
+}
+
+/* Page header */
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.about-header__eyebrow {
+  margin-bottom: var(--space-4);
+}
+
+.about-header__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.04em;
+}
+
+.about-header__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Content grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.about-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  animation: fadeInUp 0.6s ease both;
+  transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.about-card:hover {
+  border-color: rgba(99, 102, 241, 0.25);
+  transform: translateY(-2px);
+}
+
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+
+.about-card__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-5);
+  display: block;
+}
+
+.about-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.about-card__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.about-card__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Tech stack */
+.about-tech {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+  animation: fadeInUp 0.6s 0.3s ease both;
+}
+
+.about-tech__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.about-tech__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.tech-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.tech-chip:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.tech-chip__icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* API Attribution */
+.about-attribution {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  animation: fadeInUp 0.6s 0.4s ease both;
+}
+
+.about-attribution__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.about-attribution__content {}
+
+.about-attribution__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.about-attribution__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.about-attribution__link {
+  color: #a5b4fc;
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-attribution__link:hover {
+  color: var(--color-accent-to);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-attribution {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-4);
+  }
+}
