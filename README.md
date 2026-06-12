@@ -9,3 +9,6 @@ These parameters accept the following values in a comma delimited list
 <li>location
 <li>email address
 <li>birthday
+
+
+### `npm i`
